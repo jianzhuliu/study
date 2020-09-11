@@ -5,7 +5,7 @@
 windows 下部署
 
 --------下载 
-https://windows.php.net/download#php-7.4
+https://windows.php.net/download
 
 对于Non Thread Safe和Thread safe版本的选择，
 可见下载页面左边  Which version do I choose? 说明
