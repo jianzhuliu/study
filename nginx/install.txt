@@ -1,0 +1,60 @@
+
+
+----------------------------nginx
+
+----下载
+http://nginx.org/en/download.html 
+下载 Stable Version  如 nginx/Windows-1.18.0
+
+解压到  D:\nginx 
+
+----创建代码保存目录如 D:\www, 默认为 D:\nginx\html 
+
+----配置 nginx.conf ,用于支持php7
+
+1、原 
+location / {
+	root   html;
+	index  index.html index.htm index.php;
+}
+替换为
+location / {
+	root 	d:\www;
+	index  index.html index.htm index.php;
+}		
+
+
+2、配置 location ~ \.php$ { 部分
+location ~ \.php$ {
+	root           d:\www;
+	fastcgi_pass   localhost:9000;
+	fastcgi_index  index.php;
+	fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+	include        fastcgi_params;
+}
+
+------测试php
+新建文件 D:\www\info.php ,内容如
+<?php 
+	phpinfo();
+?>
+
+
+-------启动
+1、启动php-cgi 
+D:\php7\php-cgi.exe -b 127.0.0.1:9000 -c D:\php7\php.ini
+
+2、启动 nginx 
+D:\nginx\nginx.exe -p D:\nginx
+
+3、浏览器访问  127.0.0.1/info.php 
+
+4、关闭
+关闭 nginx
+taskkill /F /IM nginx.exe > nul 
+ 
+关闭 PHP FastCGI
+taskkill /F /IM php-cgi.exe > nul  
+
+
+
