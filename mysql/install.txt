@@ -1,0 +1,40 @@
+
+-----------------------------mysql    
+
+--------下载
+
+官网或者镜像 -- 使用 ZIP Archive package
+
+http://mirrors.sohu.com/mysql/MySQL-8.0/
+http://mirrors.ustc.edu.cn/mysql-ftp/Downloads/MySQL-8.0/
+https://dev.mysql.com/downloads/mysql/
+
+开发文档 
+https://dev.mysql.com/doc/refman/8.0/en/
+
+下载包解压到 C:\\Program Files\\MySQL\\MySQL Server 8.0
+
+--------初始化
+1、创建 mysql data 目录 D:\\MySQLdata
+2、创建配置文件 D:\my.ini 
+内容如
+[mysqld]
+basedir=C:\\Program Files\\MySQL\\MySQL Server 8.0
+datadir=D:\\MySQLdata
+
+3、bin目录下执行 (--initialize 初始化随机密码  --initialize-insecure 无密码)
+mysqld --defaults-file=D:\my.ini --initialize-insecure --console
+
+---------启动
+mysqld --defaults-file=D:\my.ini --console
+
+---------关闭  
+mysqladmin -u root shutdown
+
+---------控制台
+mysql -uroot -p
+>show databases;
+>show create database mysql;
+>CREATE DATABASE `yourdbname` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+
+
