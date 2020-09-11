@@ -1,0 +1,38 @@
+
+
+------------------------php7 
+
+windows 下部署
+
+--------下载 
+https://windows.php.net/download#php-7.4
+
+对于Non Thread Safe和Thread safe版本的选择，
+可见下载页面左边  Which version do I choose? 说明
+PHP有2中运行方式：ISAPI和FastCGI。
+ISAPI执行方式是以DLL动态库的形式使用，可以在被用户请求后执行，在处理完一个用户请求后不会马上消失，所以需要进行线程安全检查，这样来提高程序的执行效率，所以如果是以ISAPI来执行PHP，建议选择Thread Safe版本；
+而FastCGI执行方式是以单一线程来执行操作，所以不需要进行线程的安全检查，除去线程安全检查的防护反而可以提高执行效率，所以，如果是以FastCGI来执行PHP，建议选择Non Thread Safe版本。
+对于apache服务器来说一般选择isapi方式，而对于nginx服务器则选择FastCGI方式。
+
+解压到 D:\php7
+
+-----复制 php.ini-development 为 php.ini，然后配置
+1、 extension_dir 
+找到 	;extension_dir = "ext"
+替换为 	extension_dir = "D:\\php7\\ext"
+
+2、Dynamic Extensions
+开启 
+extension=curl
+extension=fileinfo
+extension=gettext
+extension=mbstring
+extension=mysqli
+extension=pdo_mysql
+extension=pdo_sqlite
+
+
+--------------配置系统环境变量  
+添加 D:\php7
+之后，控制台就可以执行 php -v
+
