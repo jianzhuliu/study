@@ -6,9 +6,9 @@
 http://nginx.org/en/download.html 
 下载 Stable Version  如 nginx/Windows-1.18.0
 
-解压到  D:\nginx 
+解压到  D:\program\nginx 
 
-----创建代码保存目录如 D:\www, 默认为 D:\nginx\html 
+----创建代码保存目录如 D:\www, 默认为 D:\program\nginx\html 
 
 ----配置 nginx.conf ,用于支持php7
 
@@ -42,10 +42,10 @@ location ~ \.php$ {
 
 -------启动
 1、启动php-cgi 
-D:\php7\php-cgi.exe -b 127.0.0.1:9000 -c D:\php7\php.ini
+D:\program\php\php-cgi.exe -b 127.0.0.1:9000 -c D:\program\php\php.ini
 
 2、启动 nginx 
-D:\nginx\nginx.exe -p D:\nginx
+D:\program\nginx\nginx.exe -p D:\program\nginx
 
 3、浏览器访问  127.0.0.1/info.php 
 
