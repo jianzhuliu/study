@@ -1,3 +1,3 @@
 D:
-cd D:\progam\mysql\bin
+cd D:\program\mysql\bin
 mysql -uroot -p

@@ -1,5 +1,5 @@
 D:
-cd D:\progam\mysql\bin
+cd D:\program\mysql\bin
 mysqld --defaults-file=D:\program\mysql_config\my.ini --console
 :: mysqld --console
 pause

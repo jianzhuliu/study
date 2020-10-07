@@ -1,4 +1,4 @@
 D:
-cd D:\progam\mysql\bin
+cd D:\program\mysql\bin
 mysqladmin -u root shutdown
 pause
