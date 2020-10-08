@@ -3,6 +3,13 @@
 #单行注释
 --单行注释
 
+--创建用户
+create user 'canal'@'%' identified by '123456';
+grant select, replication slave,replication client on *.* to 'canal'@'%'; 
+alter user 'canal'@'%' identified by 'canal';
+
+
+
 --创建数据库
 show create database mysql;
 create database mystudy default character set utf8mb4 collate utf8mb4_0900_ai_ci;
