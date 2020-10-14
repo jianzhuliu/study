@@ -15,10 +15,10 @@ import (
 
 	"database/sql"
 	"encoding/json"
+	"html/template"
 	"math/rand"
 	"net/http"
 	"path/filepath"
-	"html/template"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jianzhuliu/tools/browser"
@@ -26,10 +26,10 @@ import (
 
 //数据库配置
 const (
-	DB_HOST string = "root"
-	DB_PASSWD string =""
-	DB_NAME string ="yiyan"
-	DB_TABLE string ="yiyan"
+	DB_HOST   string = "root"
+	DB_PASSWD string = ""
+	DB_NAME   string = "yiyan"
+	DB_TABLE  string = "yiyan"
 )
 
 var (
@@ -42,12 +42,11 @@ var (
 	wg     sync.WaitGroup
 	tokens chan struct{} = make(chan struct{}, 100)
 
-	db *sql.DB
-	dbMaxId int 
+	db      *sql.DB
+	dbMaxId int
 )
 
-var tpl *template.Template 
-
+var tpl *template.Template
 
 //初始化操作
 func init() {
@@ -62,15 +61,15 @@ func init() {
 	}
 
 	rootPath = curPath
-	dataPath = filepath.Join(rootPath, "data","hitokoto")
+	dataPath = filepath.Join(rootPath, "data", "hitokoto")
 
-	dns := fmt.Sprintf("%s:%s@/%s",DB_HOST,DB_PASSWD,DB_NAME)
+	dns := fmt.Sprintf("%s:%s@/%s", DB_HOST, DB_PASSWD, DB_NAME)
 	db, err = sql.Open("mysql", dns)
 	if err != nil {
 		log.Println("connect to db fail")
 		return
 	}
-	
+
 	//加载模板
 	tpl = template.Must(template.New("yiyan").Parse(homeTmp))
 }
@@ -178,7 +177,7 @@ func openWeb() {
 		log.Printf("query db max id fail, %d, -- %v \n", dbMaxId, err)
 		return
 	}
-	
+
 	addr := fmt.Sprintf("%s:%d", *host, *port)
 	log.Printf("begin to open web at %s \n", addr)
 	go browser.OpenWithNotice(addr)
@@ -201,13 +200,13 @@ func JSON(w http.ResponseWriter, r *http.Request, statusCode int, data []byte) {
 
 //首页
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-	
+
 	obj, err := getRandIdJson()
 	if err != nil {
 		obj.Hitokoto = "欢迎光临"
-		fmt.Println("getRandIdJson -- fail ",err)
+		fmt.Println("getRandIdJson -- fail ", err)
 	}
-	
+
 	tpl.Execute(w, obj)
 }
 
@@ -217,16 +216,16 @@ func handleYiyan(w http.ResponseWriter, r *http.Request) {
 	status := http.StatusOK
 	var data []byte
 	if err != nil {
-		fmt.Println("getRandIdJson -- fail ",err)
+		fmt.Println("getRandIdJson -- fail ", err)
 		status = http.StatusInternalServerError
 	} else {
 		data, err = json.Marshal(obj)
 		if err != nil {
-			fmt.Println("json.Marshal -- fail ",err)
+			fmt.Println("json.Marshal -- fail ", err)
 			status = http.StatusInternalServerError
 		}
 	}
-	
+
 	JSON(w, r, status, data)
 }
 
@@ -235,8 +234,8 @@ func getRandIdJson() (Yiyan, error) {
 	rand.Seed(time.Now().UnixNano())
 	num := rand.Intn(dbMaxId) + 1
 	obj := Yiyan{}
-	err := db.QueryRow(fmt.Sprintf("select word,`from`,`from_who` from %s where id= %d limit 1", DB_TABLE, num)).Scan(&obj.Hitokoto,&obj.From,&obj.From_who)
-	return obj, err 
+	err := db.QueryRow(fmt.Sprintf("select word,`from`,`from_who` from %s where id= %d limit 1", DB_TABLE, num)).Scan(&obj.Hitokoto, &obj.From, &obj.From_who)
+	return obj, err
 }
 
 var homeTmp string = `
@@ -247,7 +246,7 @@ var homeTmp string = `
 <title>一言</title>
 <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
 <style>
-.section { text-align: left; font: 50px "Microsoft Yahei"; color: #fff;}
+.section { text-align: left; color: #fff;}
 
 </style>
 <script src="/static/js/jquery-1.8.3.min.js"></script>
@@ -276,6 +275,10 @@ $(function(){
 		});
 	}
 	
+	$('#sub').click(function () {
+		loadData();
+	});
+	
 	window.setTimeout(loadData, 10000);
 });
 </script>
@@ -286,10 +289,10 @@ $(function(){
 
 <div id="dowebok">
 	<div class="section section1">
-		<h3 style="text-align: center;">一言</h3>
-		<p id="yiyan" style="text-align: center;">『{{ .Hitokoto }}』</p>
-		<div style="text-align:right">—— <span id="from">{{ .From }}</span>「<span id="from_who"></span>」{{ .From_who }}</div>
-		<div style="text-align:right;font-size: 20px;margin-top: 15px;">数据收集来源: <a href="https://hitokoto.cn/" target="_blank">https://hitokoto.cn/</a></div>
+		<h3 style="text-align: center;font-size: 60px;" id="sub" title="切换">一言</h3>
+		<p id="yiyan" style="text-align: center;font-size: 40px;">『{{ .Hitokoto }}』</p>
+		<div style="text-align:right;font-size: 20px;">—— <span id="from">{{ .From }}</span>「<span id="from_who"></span>」{{ .From_who }}</div>
+		<div style="text-align:right;font-size: 10px;margin-top: 15px;">数据收集来源: <a href="https://hitokoto.cn/" target="_blank">https://hitokoto.cn/</a></div>
 	</div>
 </div>
 

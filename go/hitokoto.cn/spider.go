@@ -202,14 +202,13 @@ func download(num int, c rune) {
 
 	log.Printf("goroutine[%d] from url[%s] get id %v \n", num, targetUrl, id)
 
-
 	baseName := joinAB(paramC, "_", id)
 
 	//保存文件
 	//paramCPath := filepath.Join(dataPath, paramC)
 	//os.MkdirAll(paramCPath, perm)
 	//file := filepath.Join(paramCPath, joinAB(baseName, "", ".json"))
-	
+
 	file := filepath.Join(dataPath, "id_"+id+".json")
 	ioutil.WriteFile(file, content, perm)
 
