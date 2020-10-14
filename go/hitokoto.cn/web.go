@@ -279,7 +279,7 @@ $(function(){
 		loadData();
 	});
 	
-	window.setTimeout(loadData, 10000);
+	window.setInterval(loadData, 30000);
 });
 </script>
 
