@@ -15,4 +15,7 @@ func SetRoutes(r *gin.Engine) {
 	authorized.GET("index", services.Index)
 	authorized.GET("", services.Login)
 	authorized.POST("login", services.PostLogin)
+	
+	authorized.GET("db/:dbname", services.Db)
+	authorized.POST("table/desc/:dbname/:tblname", services.Table)
 }

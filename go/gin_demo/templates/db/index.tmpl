@@ -1,0 +1,78 @@
+{{ define "db/index.tmpl" }}
+
+{{ template "header" }}
+	
+<div class="container">	
+	<div class="page-header">
+		<h1>数据库 {{ .dbname }} 表列表 <small><a href="/index" class="btn btn-default" role="button">数据库列表</a>
+    </small></h1>
+	</div>
+
+	{{ if .msg }}
+	<div class="alert alert-warning" role="alert">{{.msg}}</div>
+	{{end}}
+
+	<fieldset>
+		<legend>表列表</legend>
+
+    	<table class="table table-hover">
+			<tr>
+			  <td class="success">表名</td>
+			  <td class="success">操作</td>
+			</tr>
+			{{ range $index,$tblname := .data }}
+			<tr>
+			  <td class="active">{{$tblname}}</td>
+			  <td class="active">
+			  	<a href="javascript:showTableDesc('{{$tblname}}', {{$index}});">表结构</a>
+			  </td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="panel panel-default" > <div style="display:none;" class="panel-body" id="error_{{$index}}"></div></div>
+				</td>
+			</tr>
+			{{ end }}
+		</table>
+	</fieldset>
+	
+	</div>
+</div>
+
+<script type="text/javascript">
+	var server_id = "{$server_id}";
+
+	function showTableDesc(tablename, id)
+	{
+		var content_id='#error_'+id;
+		var display_status = $(content_id).css("display");
+
+		if(display_status == 'none')
+		{
+			$(content_id).css('display','block');
+			var pars = 'r=' + Math.random();
+
+			$.ajax({
+				url:"/table/desc/{{ .dbname }}/"+tablename,
+				async:false,
+				data:pars,
+				type:"POST",
+				beforeSend:function(){
+					$(content_id).html("查询中...");
+				},
+				success:function(data , textStatus){
+					$(content_id).html(data);
+				},
+			});
+		}
+		else
+		{
+			$(content_id).css('display','none');
+		}
+	}
+
+</script>
+
+{{ template "footer" }}
+
+{{ end }}

@@ -1,0 +1,37 @@
+{{ define "table/desc.tmpl" }}
+
+	
+<div class="container">	
+	{{ if .msg }}
+	<div class="alert alert-warning" role="alert">{{.msg}}</div>
+	{{end}}
+
+	{{ if .data }}
+	<table class="table table-condensed table-bordered">
+		<tr>
+			<td class="success">Field</td>
+			<td class="success">Type</td>
+			<td class="success">Null</td>
+			<td class="success">Key</td>
+			<td class="success">Default</td>
+			<td class="success">Extra</td>
+		</tr>
+		{{ range $obj := .data }}
+		{{ with $obj }}
+		<tr>
+			<td class="active">{{ .Field}}</td>
+			<td class="active">{{ .Type}}</td>
+			<td class="active">{{ .Null}}</td>
+			<td class="active">{{ .Key}}</td>
+			<td class="active">{{ .Default}}</td>
+			<td class="active">{{ .Extra}}</td>
+		</tr>
+		{{ end }}
+		{{ end }}
+	{{end}}
+	</table>
+	
+</div>
+
+
+{{ end }}

@@ -1,0 +1,41 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:3000
+127.0.0.1 - [2020-10-30 16:35:48.552294900] "GET /?cache-bust=1604046948547 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:35:50.045789100] "GET /sw.js HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:05.820988100] "GET /?cache-bust=1604046965811 HTTP/1.1 401 4.9902ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:05.976990100] "GET /README.md?cache-bust=1604046965966 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:06.132988100] "GET /favicon.ico?cache-bust=1604046966099 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:07.260943900] "GET /?cache-bust=1604046967258 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:07.326942000] "GET /README.md?cache-bust=1604046967323 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:07.806505000] "GET /?cache-bust=1604046967799 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:07.829501400] "GET /sw.js HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:07.964506000] "GET /README.md?cache-bust=1604046967913 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:08.000505600] "GET /?cache-bust=1604046967995 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:08.114502800] "GET /README.md?cache-bust=1604046968111 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:08.777374500] "GET /?cache-bust=1604046968775 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:08.838376700] "GET /README.md?cache-bust=1604046968829 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:08.970375100] "GET /?cache-bust=1604046968966 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.037373000] "GET /README.md?cache-bust=1604046969032 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.162373900] "GET /?cache-bust=1604046969158 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.225373800] "GET /README.md?cache-bust=1604046969221 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.357374300] "GET /?cache-bust=1604046969354 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.420372900] "GET /README.md?cache-bust=1604046969414 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.539374300] "GET /?cache-bust=1604046969536 HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.603414600] "GET /README.md?cache-bust=1604046969598 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:09.741374500] "GET /sw.js HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:11.221095600] "GET /sw.js HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "

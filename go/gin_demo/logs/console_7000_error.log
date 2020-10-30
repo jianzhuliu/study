@@ -1,0 +1,43 @@
+
+
+[31m2020/10/30 18:38:09 [Recovery] 2020/10/30 - 18:38:09 panic recovered:
+GET /db/go_blog HTTP/1.1
+Host: 127.0.0.1:7000
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Authorization: *
+Connection: keep-alive
+Referer: http://127.0.0.1:7000/index
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+
+
+html/template: "db/index.tmpl" is undefined
+W:/jianzhu/git_clone/gin-gonic/gin/context.go:866 (0x5b15c4)
+	(*Context).Render: panic(err)
+W:/jianzhu/git_clone/gin-gonic/gin/context.go:875 (0x5b1684)
+	(*Context).HTML: c.Render(code, instance)
+W:/jianzhu/git/common/study/go/gin_demo/services/db.go:21 (0x686135)
+	Db: c.HTML(http.StatusOK, "db/index.tmpl", gin.H{"msg":msg, "dbname":dbname,"data":data})
+W:/jianzhu/git_clone/gin-gonic/gin/context.go:165 (0x5ad341)
+	(*Context).Next: c.handlers[c.index](c)
+W:/jianzhu/git_clone/gin-gonic/gin/recovery.go:98 (0x5c1d2f)
+	CustomRecoveryWithWriter.func1: c.Next()
+W:/jianzhu/git_clone/gin-gonic/gin/context.go:165 (0x5ad341)
+	(*Context).Next: c.handlers[c.index](c)
+W:/jianzhu/git_clone/gin-gonic/gin/logger.go:241 (0x5c0df3)
+	LoggerWithConfig.func1: c.Next()
+W:/jianzhu/git_clone/gin-gonic/gin/context.go:165 (0x5ad341)
+	(*Context).Next: c.handlers[c.index](c)
+W:/jianzhu/git_clone/gin-gonic/gin/gin.go:420 (0x5b79b3)
+	(*Engine).handleHTTPRequest: c.Next()
+W:/jianzhu/git_clone/gin-gonic/gin/gin.go:376 (0x5b7104)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+c:/go/src/net/http/server.go:2843 (0x335c29)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+c:/go/src/net/http/server.go:1925 (0x33124c)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+c:/go/src/runtime/asm_amd64.s:1374 (0xdbd20)
+	goexit: BYTE	$0x90	// NOP
+[0m

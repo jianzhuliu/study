@@ -1,0 +1,811 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- 
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 16:36:37.868279000] "GET / HTTP/1.1 401 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:43.665488900] "GET / HTTP/1.1 200 1.998ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.020483100] "GET /static/css/style.css?v=4.1.0 HTTP/1.1 200 279.9957ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.026490200] "GET /static/css/bootstrap.min.css?v=3.3.6 HTTP/1.1 200 286.9984ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.030482500] "GET /static/css/font-awesome.css?v=4.4.0 HTTP/1.1 200 291.9968ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.035483700] "GET /static/js/layer/layer.js HTTP/1.1 200 280.9969ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.042486200] "GET /static/css/login.css?v=4.1.0 HTTP/1.1 200 300.9994ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.047486100] "GET /static/js/jquery.min.js HTTP/1.1 200 297.0003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.154486200] "GET /static/img/login-background.jpg HTTP/1.1 200 63.9999ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.345504600] "GET /static/js/layer/skin/default/layer.css?v=3.0.11110 HTTP/1.1 200 19.017ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.417565800] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.501487200] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.509489500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:36:44.709484000] "GET /static/favicon.ico HTTP/1.1 200 76.9986ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:28.405900300] "GET / HTTP/1.1 200 2.0089ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:28.527897600] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:28.591900400] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:28.621892700] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:28.669893600] "GET /static/favicon.ico HTTP/1.1 200 1.998ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:53.922012800] "GET / HTTP/1.1 200 3.0083ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:54.028008100] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 1.0036ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:54.092006100] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:54.103007100] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:54.177007700] "GET /static/favicon.ico HTTP/1.1 200 998.8µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:55.210274700] "GET / HTTP/1.1 200 6.0049ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:55.395287600] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:55.446272700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:55.462268400] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 1.0007ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:55.503294500] "GET /static/favicon.ico HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:57.259045900] "GET / HTTP/1.1 200 1.9983ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:57.336047700] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:57.397046400] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:57.405047500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 1.0017ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:40:57.452047600] "GET /static/favicon.ico HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:12.402296300] "GET / HTTP/1.1 200 2.9827ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:12.514298000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:12.585301700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:12.595301500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:12.662300600] "GET /static/favicon.ico HTTP/1.1 200 1.0013ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:13.499554900] "GET / HTTP/1.1 200 2.0338ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:13.583521300] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:13.656523100] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:13.681525000] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:13.742519400] "GET /static/favicon.ico HTTP/1.1 200 9.9993ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:27.686058500] "GET / HTTP/1.1 200 2.0072ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:27.792113800] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:27.878058100] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 1.0034ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:27.905054500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:41:27.945058900] "GET /static/favicon.ico HTTP/1.1 200 1.0046ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:43:19.410362100] "GET / HTTP/1.1 200 3.0013ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:43:19.517361200] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:43:19.604362900] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:43:19.615410800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:43:19.654361200] "GET /static/favicon.ico HTTP/1.1 200 995.3µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 16:58:35.338082400] "GET / HTTP/1.1 200 1.9988ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:36.585913600] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 1.0073ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:36.670909700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:36.685911600] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:39.030271100] "POST /login HTTP/1.1 200 15.0027ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:39.272444300] "GET /static/js/layer/skin/default/icon.png HTTP/1.1 200 227.1764ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:58:45.249928900] "POST /login HTTP/1.1 200 3.0069ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 16:59:24.562921900] "GET / HTTP/1.1 200 3.002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:24.882924100] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 1.0065ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:24.937918200] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:24.966920500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:26.493777900] "POST /login HTTP/1.1 200 5.9939ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:29.722239200] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 999.1µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 16:59:29.735247200] "GET /index HTTP/1.1 200 3.0101ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- index.tmpl
+	- index/index.tmpl
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 17:15:16.461763200] "GET / HTTP/1.1 200 5.9992ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:15:16.773764600] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:15:16.841763400] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:15:16.865764700] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:15:18.224898300] "POST /login HTTP/1.1 200 9.9985ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:15:27.911305100] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.270143400] "GET / HTTP/1.1 200 1.9985ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.460151100] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 2.0062ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.496146400] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 1.9978ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.536146800] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.569143800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:26.828144600] "GET /static/favicon.ico HTTP/1.1 200 198.9266ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:16:50.313729200] "POST /login HTTP/1.1 200 5.0046ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.151734700] "GET / HTTP/1.1 200 10.9996ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.335735700] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.369734800] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.379736000] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.428743600] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 1.0094ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:44.508737600] "GET /static/favicon.ico HTTP/1.1 200 2.002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:45.387166700] "POST /login HTTP/1.1 200 4.0061ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:48.619325000] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:48.669318700] "GET /index HTTP/1.1 200 14.999ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:17:48.803320500] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (5): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 17:35:17.221242700] "GET / HTTP/1.1 200 1.9983ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:17.701245900] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:17.801239800] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:17.824240900] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:19.227075000] "POST /login HTTP/1.1 200 7.0059ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:22.451804500] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:35:22.466802800] "GET /index HTTP/1.1 200 5.9968ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:37:24.096875500] "GET /index HTTP/1.1 200 2.9978ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:37:24.399879100] "GET /static/favicon.ico HTTP/1.1 200 227.0004ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:38:13.392787400] "GET /index HTTP/1.1 200 4.9948ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:38:13.451789700] "GET /static/favicon.ico HTTP/1.1 200 995.8µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:39:45.857660300] "GET /index HTTP/1.1 200 3.003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:39:45.928676600] "GET /static/favicon.ico HTTP/1.1 200 2.016ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:08.143938600] "GET /index HTTP/1.1 200 3.0173ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:08.220923800] "GET /static/favicon.ico HTTP/1.1 200 3.0024ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:34.031142000] "GET /index HTTP/1.1 200 4.0064ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:34.100138700] "GET /static/favicon.ico HTTP/1.1 200 2.0016ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:36.188350400] "GET /table/daily HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:41:36.248342900] "GET /favicon.ico HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (9): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- footer.tmpl
+	- layout/footer.tmpl
+	- layout/header.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- header.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 17:52:07.660676100] "GET / HTTP/1.1 200 6.9949ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:08.680838100] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:08.708864700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:08.726838300] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:11.298584600] "POST /login HTTP/1.1 200 11.9996ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:14.533212200] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:52:14.571198400] "GET /index HTTP/1.1 200 14.9942ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (9): 
+	- index/index.tmpl
+	- header.tmpl
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- footer.tmpl
+	- footer
+	- header
+	- 
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 17:53:40.550306300] "GET / HTTP/1.1 200 3.9959ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:40.840307700] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:40.885309600] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:40.915314800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:43.702780200] "POST /login HTTP/1.1 200 4.999ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:46.933361800] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:53:46.963363700] "GET /index HTTP/1.1 200 15.9714ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:59:44.411815400] "GET /index HTTP/1.1 200 5.0003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 17:59:44.739809600] "GET /static/favicon.ico HTTP/1.1 200 257.9948ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:00:54.426647200] "GET /index HTTP/1.1 200 4.0197ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:00:54.503628200] "GET /static/favicon.ico HTTP/1.1 200 5.0002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:01:38.768911400] "GET /index HTTP/1.1 200 5.0025ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:01:38.846917800] "GET /static/favicon.ico HTTP/1.1 200 3.0052ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:03:10.374509100] "GET /index HTTP/1.1 200 3.9987ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:03:10.472511100] "GET /static/favicon.ico HTTP/1.1 200 987.9µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (10): 
+	- auth/login.tmpl
+	- index.tmpl
+	- table/index.tmpl
+	- footer.tmpl
+	- footer
+	- 
+	- login.tmpl
+	- index/index.tmpl
+	- header.tmpl
+	- header
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:37:59.016003800] "GET / HTTP/1.1 200 5.0015ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:01.152670300] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:01.231660200] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:01.240664900] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:02.494337000] "POST /login HTTP/1.1 200 9.0329ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:05.727277300] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 1.0013ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:05.750306400] "GET /index HTTP/1.1 200 14.9904ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:09.171392600] "GET /db/go_blog HTTP/1.1 500 9.995ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (11): 
+	- table/index.tmpl
+	- 
+	- db/index.tmpl
+	- index/index.tmpl
+	- footer
+	- header
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- footer.tmpl
+	- header.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:38:42.617661500] "GET / HTTP/1.1 200 9.9989ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:43.911849000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:44.005848800] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:44.018865500] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:45.204153400] "POST /login HTTP/1.1 200 2.9923ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:48.436491800] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:48.466491900] "GET /index HTTP/1.1 200 13.0034ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:51.622141700] "GET /db/go_blog HTTP/1.1 200 3.9906ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:53.556738000] "GET / HTTP/1.1 200 3.0191ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:53.651721300] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:53.725726500] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:53.775721300] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:56.735192000] "POST /login HTTP/1.1 200 3.0031ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:59.956673700] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:38:59.975671800] "GET /index HTTP/1.1 200 7.9945ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:39:24.922314800] "GET /db/mynote HTTP/1.1 200 7.9999ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:33.091679000] "GET /db/mynote HTTP/1.1 200 10.0024ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:33.399672500] "GET /static/favicon.ico HTTP/1.1 200 224.9974ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:34.676468300] "GET /db/mynote HTTP/1.1 200 6.9777ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:34.745475800] "GET /static/favicon.ico HTTP/1.1 200 1.0057ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:41.067689500] "GET /db/mynote HTTP/1.1 200 9.001ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:44:41.134706200] "GET /static/favicon.ico HTTP/1.1 200 2.0104ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (11): 
+	- 
+	- db/index.tmpl
+	- footer
+	- header.tmpl
+	- header
+	- table/index.tmpl
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:45:17.110017600] "GET / HTTP/1.1 200 8.003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:18.468264200] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:18.552266300] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:18.564269800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:19.738229500] "POST /login HTTP/1.1 200 4.0014ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:22.967156400] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:23.008156400] "GET /index HTTP/1.1 200 22.0009ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:25.049459000] "GET /db/mynote HTTP/1.1 200 7.0035ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:45:59.903317700] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (11): 
+	- footer.tmpl
+	- footer
+	- header
+	- table/index.tmpl
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- index/index.tmpl
+	- header.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] GET    /table/:dbname/:tblname/:optype --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:56:31.374360300] "GET / HTTP/1.1 200 7.9993ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:32.568001000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:32.608001700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:32.615007200] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:33.703424600] "POST /login HTTP/1.1 200 6.9972ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:36.960378200] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 1.0106ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:36.971367800] "GET /index HTTP/1.1 200 9.9934ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:39.552640300] "GET /db/go_blog HTTP/1.1 200 5.0076ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:56:40.921703400] "POST /table/show/go_blog/z_categories/Fields HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:05.411091900] "GET /db/go_blog HTTP/1.1 200 8.0238ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:05.699069000] "GET /static/favicon.ico HTTP/1.1 200 201.9934ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:06.515390800] "POST /table/go_blog/z_categories/Desc HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (11): 
+	- login.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+	- footer
+	- header
+	- 
+	- auth/login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- header.tmpl
+	- table/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] GET    /table/:dbname/:tblname/:optype --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:57:13.841149900] "GET / HTTP/1.1 200 5.0027ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:14.750596900] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 999.5µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:14.804606500] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:14.817598400] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:17.384144500] "POST /login HTTP/1.1 200 4.9983ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:20.619792000] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 4.0006ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:20.654785800] "GET /index HTTP/1.1 200 14.9972ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:22.728263700] "GET /db/go_blog HTTP/1.1 200 7.0025ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:23.594190900] "POST /table/go_blog/z_categories/Fields HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:27.405290600] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:57:47.771628200] "POST /table/go_blog/z_categories/Fields HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (11): 
+	- footer.tmpl
+	- footer
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- index/index.tmpl
+	- header.tmpl
+	- header
+	- table/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/:dbname/:tblname/:optype --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 18:59:19.622843300] "GET / HTTP/1.1 200 7.9975ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:19.886878500] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 2.0347ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:19.946848700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:19.962847800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 999µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:21.116667100] "POST /login HTTP/1.1 200 3.9977ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:24.349916800] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:24.370946200] "GET /index HTTP/1.1 200 11.0251ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:26.243175900] "GET /db/go_blog HTTP/1.1 200 9.003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:27.603877400] "POST /table/go_blog/z_categories/Fields HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:32.184288900] "POST /table/go_blog/z_categories/Desc HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:34.312140200] "POST /table/go_blog/z_links/Fields HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:36.808348200] "POST /table/go_blog/z_migrations/Desc HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 18:59:38.216091300] "POST /table/go_blog/z_password_resets/Fields HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- auth/login.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+	- footer
+	- table/desc.tmpl
+	- 
+	- login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- header.tmpl
+	- header
+	- desc.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 19:51:17.242863000] "GET / HTTP/1.1 200 4.9993ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:18.805165000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:18.900164900] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:18.910164600] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:20.058027000] "POST /login HTTP/1.1 200 6.9963ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:23.293583800] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 4.0036ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:23.331569400] "GET /index HTTP/1.1 200 17.9893ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:27.384408900] "GET /db/mynote HTTP/1.1 200 9.0009ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:29.076069100] "POST /table/desc/mynote/demo1 HTTP/1.1 200 5.0158ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:32.830576800] "POST /table/desc/mynote/demo2 HTTP/1.1 200 8.0221ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:51:36.536622500] "POST /table/desc/mynote/t_employee HTTP/1.1 200 5.0045ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- index.tmpl
+	- db/index.tmpl
+	- footer
+	- header.tmpl
+	- desc.tmpl
+	- login.tmpl
+	- auth/login.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+	- header
+	- table/desc.tmpl
+	- 
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 19:52:39.643062700] "GET / HTTP/1.1 200 9.0006ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:41.172184900] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:41.255185700] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:41.275186900] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:44.031766000] "POST /login HTTP/1.1 200 5.0005ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:47.261645800] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:47.281658500] "GET /index HTTP/1.1 200 8.0091ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:51.001325800] "GET /db/mynote HTTP/1.1 200 36.1346ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:52.798233200] "POST /table/desc/mynote/t_employee HTTP/1.1 200 5.002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:55.136233000] "POST /table/desc/mynote/demo2 HTTP/1.1 200 4.0033ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:52:56.669383500] "POST /table/desc/mynote/demo2 HTTP/1.1 200 4.9732ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:19.105299700] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- footer.tmpl
+	- footer
+	- header
+	- desc.tmpl
+	- 
+	- table/desc.tmpl
+	- index/index.tmpl
+	- header.tmpl
+	- auth/login.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 19:53:51.798207800] "GET / HTTP/1.1 200 10.0033ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:53.288118300] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 1.9989ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:53.360116900] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:53.368121600] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:54.674200200] "POST /login HTTP/1.1 200 4.0043ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:57.906414400] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 995.8µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:53:57.959432600] "GET /index HTTP/1.1 200 10.0202ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:01.006125000] "GET /db/mynote HTTP/1.1 200 5.993ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:02.588262200] "POST /table/desc/mynote/demo1 HTTP/1.1 200 5.9806ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:05.344379300] "POST /table/desc/mynote/demo2 HTTP/1.1 200 4.0126ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:08.765946900] "POST /table/desc/mynote/t_employee HTTP/1.1 200 3.9976ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:51.832913100] "GET /index HTTP/1.1 200 5.9954ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:54:56.133278500] "GET /db/mynote HTTP/1.1 200 5.0148ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:38.400200700] "POST /table/desc/mynote/demo1 HTTP/1.1 200 6.9948ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:42.769366600] "POST /table/desc/mynote/demo2 HTTP/1.1 200 3.9758ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:44.889099300] "POST /table/desc/mynote/t_employee HTTP/1.1 200 4.0199ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:47.466944500] "POST /table/desc/mynote/t_stu HTTP/1.1 200 78.3318ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:49.665846400] "POST /table/desc/mynote/t_team HTTP/1.1 200 5.0006ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:56:55.457429900] "POST /table/desc/mynote/t_user HTTP/1.1 200 4.0012ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:06.858394900] "POST /table/desc/mynote/test1 HTTP/1.1 200 5.0026ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:11.293351600] "GET /index HTTP/1.1 200 2.9987ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:13.496441700] "GET /db/mystudy HTTP/1.1 200 3.9832ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:15.002486700] "POST /table/desc/mystudy/tb_commodity_info HTTP/1.1 200 26.1155ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:18.517603100] "GET /index HTTP/1.1 200 4.9935ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:22.590588800] "GET /db/yiyan HTTP/1.1 200 4.9997ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 19:57:23.724744900] "POST /table/desc/yiyan/yiyan HTTP/1.1 200 107.2944ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- login.tmpl
+	- footer.tmpl
+	- footer
+	- desc.tmpl
+	- table/desc.tmpl
+	- 
+	- auth/login.tmpl
+	- index.tmpl
+	- db/index.tmpl
+	- index/index.tmpl
+	- header.tmpl
+	- header
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:50:55.498992100] "GET / HTTP/1.1 200 6.9985ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:50:56.028989000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:50:56.115989600] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:50:56.141989800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:51:02.458939400] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 1.0045ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:51:20.438667100] "POST /login HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- db/index.tmpl
+	- footer
+	- desc.tmpl
+	- table/desc.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+	- header.tmpl
+	- header
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:53:06.935429500] "GET / HTTP/1.1 200 7.0049ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:53:07.341426600] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:53:07.359428500] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:53:07.371427400] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 1.001ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:53:10.153139200] "POST /login HTTP/1.1 200 1.0882ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- index.tmpl
+	- footer.tmpl
+	- header.tmpl
+	- 
+	- login.tmpl
+	- index/index.tmpl
+	- footer
+	- header
+	- desc.tmpl
+	- table/desc.tmpl
+	- auth/login.tmpl
+	- db/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:54:26.757601300] "GET / HTTP/1.1 200 8.0034ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:54:27.082601200] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 998.9µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:54:27.126598600] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:54:27.172600100] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 1.0003ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:54:39.195159000] "GET /static/css/bootstrap.min.css.map HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:54:44.269141500] "POST /login HTTP/1.1 200 1.9982ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- table/desc.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- footer.tmpl
+	- header.tmpl
+	- footer
+	- header
+	- desc.tmpl
+	- 
+	- login.tmpl
+	- auth/login.tmpl
+	- db/index.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:55:29.062471400] "GET / HTTP/1.1 200 8.0008ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:55:29.337471000] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:55:29.444472500] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 998.3µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:55:29.456471800] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:55:31.998353300] "POST /login HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- index/index.tmpl
+	- footer
+	- header.tmpl
+	- desc.tmpl
+	- table/desc.tmpl
+	- 
+	- index.tmpl
+	- db/index.tmpl
+	- footer.tmpl
+	- header
+	- login.tmpl
+	- auth/login.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:56:43.011934200] "GET / HTTP/1.1 200 10.9963ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:44.186752800] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:44.273749400] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 1.0002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:44.280748600] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:45.903466200] "POST /login HTTP/1.1 200 7.0007ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:49.129098200] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:49.171093100] "GET /index HTTP/1.1 200 13.9948ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:50.933236200] "GET /db/db_stocks HTTP/1.1 200 6.9989ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:52.676215600] "POST /table/desc/db_stocks/tb_oauth_access_tokens HTTP/1.1 200 39.5058ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:54.501497400] "POST /table/desc/db_stocks/tb_test HTTP/1.1 200 41.996ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:56:56.159577900] "POST /table/desc/db_stocks/tb_users HTTP/1.1 200 6.0222ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (12): 
+	- 
+	- login.tmpl
+	- db/index.tmpl
+	- footer.tmpl
+	- footer
+	- header
+	- auth/login.tmpl
+	- index.tmpl
+	- index/index.tmpl
+	- header.tmpl
+	- desc.tmpl
+	- table/desc.tmpl
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> gin_demo/services.Index (4 handlers)
+[GIN-debug] GET    /                         --> gin_demo/services.Login (4 handlers)
+[GIN-debug] POST   /login                    --> gin_demo/services.PostLogin (4 handlers)
+[GIN-debug] GET    /db/:dbname               --> gin_demo/services.Db (4 handlers)
+[GIN-debug] POST   /table/desc/:dbname/:tblname --> gin_demo/services.Table (4 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:7000
+127.0.0.1 - [2020-10-30 20:57:50.423956800] "GET / HTTP/1.1 200 4.992ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:50.905954300] "GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:50.948958900] "GET /static/fonts/fontawesome-webfont.woff?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:50.964958900] "GET /static/fonts/fontawesome-webfont.ttf?v=4.4.0 HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:52.465915400] "POST /login HTTP/1.1 200 7.9979ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:55.738960000] "GET /static/js/layer/skin/default/loading-0.gif HTTP/1.1 404 999.4µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:55.755963600] "GET /index HTTP/1.1 200 19.0012ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:58.180891000] "GET /db/note HTTP/1.1 200 6.0061ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:57:59.532529500] "POST /table/desc/note/article HTTP/1.1 200 40.2126ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:58:01.639560200] "POST /table/desc/note/folder HTTP/1.1 200 5.0002ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
+127.0.0.1 - [2020-10-30 20:58:03.750393900] "POST /table/desc/note/my_book HTTP/1.1 200 3.9833ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36" "
