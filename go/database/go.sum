@@ -1,0 +1,4 @@
+gitee.com/jianzhuliu/tools v0.0.0-20201027051504-ee6873eb81c4 h1:WJzdDCJNoviffrhOrWlct9lNxk8fMZocRvKCzLBb7Ds=
+gitee.com/jianzhuliu/tools v0.0.0-20201027051504-ee6873eb81c4/go.mod h1:/iLJOZsYLUayTB1C2lpK5ORDhijwKzrZ4gcaf4NocdM=
+github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
+github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
